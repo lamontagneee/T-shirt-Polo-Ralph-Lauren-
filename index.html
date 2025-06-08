@@ -4,64 +4,65 @@
   <meta charset="UTF-8">
   <title>T-shirt Polo Ralph Lauren مستورد</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link href="https://fonts.googleapis.com/css2?family=Changa:wght@400;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;500;800&display=swap" rel="stylesheet">
   <style>
     body {
-      background: linear-gradient(to left, #e0f2fe, #dbeafe);
-      font-family: 'Changa', sans-serif;
+      background-color: white;
+      color: black;
+      font-family: 'Cairo', sans-serif;
       margin: 0;
       padding: 0;
-      color: #1e293b;
     }
 
     header {
-      background-color: #0f172a;
       padding: 20px;
-      display: flex;
-      justify-content: center;
-      align-items: center;
+      text-align: center;
     }
 
     header img {
-      max-height: 200px;
-      width: auto;
+      max-height: 150px;
     }
 
     main {
       max-width: 800px;
-      margin: 40px auto;
-      background-color: #fff;
-      padding: 30px;
-      border-radius: 20px;
-      box-shadow: 0 15px 40px rgba(0, 0, 0, 0.1);
+      margin: 30px auto;
+      background-color: white;
+      padding: 25px;
+      border-radius: 16px;
     }
 
     .product-image {
       text-align: center;
-      margin-bottom: 25px;
+      margin-bottom: 20px;
     }
 
     .product-image img {
       width: 100%;
-      max-height: 400px;
+      max-height: 220px;
       object-fit: cover;
-      border-radius: 15px;
+      border-radius: 12px;
     }
 
     h2 {
       text-align: center;
-      color: #1e293b;
+      font-size: 15px;
+      font-weight: 800;
+      margin-bottom: 10px;
+    }
+
+    .price {
+      text-align: right;
       font-size: 20px;
+      font-weight: bold;
+      color: green;
       margin-bottom: 25px;
-      font-weight: 700;
     }
 
     form label {
-      font-weight: 600;
+      font-weight: 700;
       display: block;
       margin-top: 18px;
-      color: #1e3a8a;
-      font-size: 17px;
+      font-size: 16px;
     }
 
     form input,
@@ -69,34 +70,29 @@
       width: 100%;
       padding: 12px;
       margin-top: 6px;
-      border: 1px solid #60a5fa;
+      border: 2px solid black;
       border-radius: 10px;
-      font-size: 16px;
-      background-color: #eff6ff;
-      transition: border 0.3s ease, background-color 0.3s ease;
+      font-size: 15px;
+      background-color: white;
+      color: black;
+      font-family: 'Cairo', sans-serif;
+      font-weight: 500;
     }
 
-    form input:focus,
-    form select:focus {
-      border-color: #3b82f6;
-      background-color: #dbeafe;
-      outline: none;
+    form input::placeholder {
+      color: #888;
     }
 
-    .section-title {
-      margin-top: 30px;
-      font-size: 20px;
-      color: #1d4ed8;
-      font-weight: bold;
-      border-bottom: 2px solid #c7d2fe;
-      padding-bottom: 5px;
+    form select:invalid {
+      color: black;
+      font-weight: 600;
     }
 
     .order-group {
       display: flex;
       flex-wrap: wrap;
       gap: 12px;
-      margin-top: 15px;
+      margin-top: 12px;
       align-items: center;
     }
 
@@ -106,55 +102,57 @@
       min-width: 100px;
     }
 
-    .order-group button {
-      background-color: #ef4444;
+    .delete-btn {
+      background-color: #e63946;
       color: white;
       border: none;
       padding: 10px 14px;
       border-radius: 8px;
-      font-weight: bold;
       cursor: pointer;
+      font-weight: 800;
+      font-size: 15px;
     }
 
     #add-order-btn {
       margin-top: 20px;
-      background-color: #10b981;
-      color: white;
-      border: none;
-      font-size: 16px;
-      padding: 12px 18px;
-      border-radius: 10px;
-      cursor: pointer;
-      font-family: 'Changa', sans-serif;
-    }
-
-    button[type="submit"] {
-      margin-top: 35px;
       width: 100%;
-      padding: 16px;
-      background-color: #2563eb;
+      padding: 14px;
+      background-color: #1976d2;
       color: white;
       border: none;
       font-size: 17px;
-      font-weight: bold;
-      border-radius: 12px;
+      font-weight: 800;
+      border-radius: 10px;
       cursor: pointer;
+      transition: background 0.3s ease;
+      letter-spacing: 0.5px;
     }
 
-    button[type="submit"]:hover {
-      background-color: #1e40af;
+    button[type="submit"] {
+      margin-top: 15px;
+      width: 100%;
+      padding: 14px;
+      background-color: #2e7d32;
+      color: white;
+      border: none;
+      font-size: 17px;
+      font-weight: 800;
+      border-radius: 10px;
+      cursor: pointer;
+      transition: background 0.3s ease;
+      letter-spacing: 0.5px;
     }
 
-    #success-message {
+    #confirmation-message {
       display: none;
       margin-top: 20px;
-      background-color: #d1e7dd;
-      color: #0f5132;
+      background-color: #e0ffe0;
+      border: 1px solid #2e7d32;
       padding: 15px;
       border-radius: 10px;
+      color: #2e7d32;
+      font-weight: 700;
       text-align: center;
-      font-weight: bold;
-      font-size: 18px;
     }
 
     @media (max-width: 600px) {
@@ -180,23 +178,14 @@
       <img src="tshi1.jpg" alt="صورة المنتج">
     </div>
 
-    <h2>T-shirt Polo Ralph Lauren مستورد</h2>
+    <h2>T-SHIRT POLO RALPH LAUREN مستورد</h2>
+    <div class="price">1900 دج</div>
 
-    <form id="order-form" action="https://formspree.io/f/xwpblklv" method="POST">
-      <label for="fullname">الاسم الكامل:</label>
-      <input type="text" name="الاسم الكامل" id="fullname" required>
-
-      <label for="phone">رقم الهاتف:</label>
-      <input type="tel" name="رقم الهاتف" id="phone" required
-             pattern="0[5-7][0-9]{8}" title="الرجاء إدخال رقم يبدأ بـ 05 أو 06 أو 07 ويتكون من 10 أرقام">
-
-      <label for="wilaya">الولاية:</label>
-      <input type="text" name="الولاية" id="wilaya" required>
-
-      <label for="commune">البلدية:</label>
-      <input type="text" name="البلدية" id="commune" required>
-
-      <div class="section-title">تفاصيل الطلب:</div>
+    <form id="order-form" action="https://formsubmit.co/maxanesalgeria@gmail.com" method="POST">
+      <input type="text" name="الاسم الكامل" id="fullname" placeholder="الاسم الكامل" required>
+      <input type="tel" name="رقم الهاتف" id="phone" placeholder="رقم الهاتف" required pattern="0[5-7][0-9]{8}" title="الرجاء إدخال رقم يبدأ بـ 05 أو 06 أو 07 ويتكون من 10 أرقام">
+      <input type="text" name="الولاية" id="wilaya" placeholder="الولاية" required>
+      <input type="text" name="البلدية" id="commune" placeholder="البلدية" required>
 
       <div id="orders-container">
         <div class="order-group">
@@ -215,18 +204,15 @@
             <option>XL</option>
             <option>XXL</option>
           </select>
-          <input type="number" name="كمية 1" placeholder="العدد" min="1" required>
+          <input type="number" name="كمية 1" placeholder="عدد القطع" min="1" required>
         </div>
       </div>
 
-      <button type="button" id="add-order-btn">➕ إضافة طلب</button>
-
+      <button type="button" id="add-order-btn">+ إضافة منتج</button>
       <button type="submit">إرسال الطلب</button>
     </form>
 
-    <div id="success-message">
-      تم استلام طلبك! سنتواصل معك قريباً لتأكيد الطلب.
-    </div>
+    <div id="confirmation-message">تم إرسال طلبك! سنتواصل معك قريباً لتأكيد الطلب.</div>
   </main>
 
   <script>
@@ -254,8 +240,8 @@
           <option>XL</option>
           <option>XXL</option>
         </select>
-        <input type="number" name="كمية ${orderCount}" placeholder="العدد" min="1" required>
-        <button type="button" onclick="this.parentElement.remove()">حذف</button>
+        <input type="number" name="كمية ${orderCount}" placeholder="عدد القطع" min="1" required>
+        <button type="button" class="delete-btn" onclick="this.parentElement.remove()">حذف</button>
       `;
 
       container.appendChild(div);
@@ -272,7 +258,7 @@
       }).then(response => {
         if (response.ok) {
           form.reset();
-          document.getElementById("success-message").style.display = "block";
+          document.getElementById("confirmation-message").style.display = "block";
           window.scrollTo({ top: 0, behavior: 'smooth' });
         } else {
           alert("حدث خطأ أثناء الإرسال. حاول مرة أخرى.");
